@@ -4,7 +4,7 @@ package Practice82;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-    public class Main {
+    class Main {
 
         public static void main(String[] args) {
             TreeSet<String> tree = new TreeSet();
@@ -17,16 +17,16 @@ import java.util.TreeSet;
                     for (String tr : tree) {
                         System.out.println(tr);
                     }
-                }  else if (text.substring(0, 3).equals("ADD")) {
-                    if(!(text.contains("@") && text.contains(".") && !text.substring(4).contains(" "))){
+                } else if (text.substring(0, 3).equals("ADD")) {
+                    if (!(text.contains("@") && text.contains(".") && !text.substring(4).contains(" "))) {
                         System.out.println("Некорректный адрес эл. почты");
                     } else {
                         tree.add(text.substring(text.indexOf(' ') + 1));
                     }
-                } else{
+                } else {
                     System.out.println("Некорректная команда");
                 }
                 text = in.nextLine();
             }
         }
-    ]
+    }
